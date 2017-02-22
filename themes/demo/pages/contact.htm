@@ -1,0 +1,73 @@
+title = "contact"
+url = "/contact"
+layout = "mainlayout"
+is_hidden = 0
+==
+<body class="other__page">
+
+<header class="header">
+		
+	
+	   {% partial 'header' %}
+
+	
+    <div class="header__info">
+        <h2>Contact</h2>
+    </div>
+
+	</header>
+	
+	<div class="footer_fixator">
+<section class="content">
+
+    <div class="container">
+        <div class="row contact__page">
+
+            <div class="col-lg-8 col-lg-offset-2 contact__info">
+                <div class="col-lg-4 contact__page_icon">
+                    <img src="themes/demo/assets/img/contact_icon.svg" alt="" class="img-responsive">
+                </div>
+                <div class="col-lg-8">
+                    <div class="col-lg-6">
+                        <p class="contact__page_phone">+995 551 34-22-55</p>
+                    </div>
+                    <div class="col-lg-6">
+                        <p class="contact__page_phone">+995 598 11-20-12</p>
+                    </div>
+                    <div class="col-lg-12">
+                        <p class="contact__page_email"><a href="#">info@applygeorgia.com</a></p>
+                    </div>
+                </div>
+
+                <div class="col-lg-12">
+                    <form action="/backend/shota/schools/SchoolController/contact" class="contact__form" method="post">
+
+                        <div class="input_area col-lg-6">
+                            <input name="first" required type="text" class="input_type" placeholder="Name and Surname">
+                        </div>
+                        <div class="input_area col-lg-6">
+                            <input name="second" required type="email" class="input_type" placeholder="Your E-Mail">
+                        </div>
+                        <div class="input_area">
+                            <textarea name="third" required class="input_type col-lg-12" placeholder="Your Message..."></textarea>
+                        </div>
+
+                        <button class="send_btn">Send</button>
+
+                    </form>
+
+
+                </div>
+
+
+            </div>
+
+
+
+        </div>
+    </div>
+
+</section>
+</div>
+
+{% partial 'footer' %}

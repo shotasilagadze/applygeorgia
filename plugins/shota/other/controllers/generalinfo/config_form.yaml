@@ -1,0 +1,10 @@
+name: GeneralInfo
+form: $/shota/other/models/g2/fields.yaml
+modelClass: Shota\Other\Models\G2
+defaultRedirect: shota/other/generalinfo
+create:
+    redirect: 'shota/other/generalinfo/update/:id'
+    redirectClose: shota/other/generalinfo
+update:
+    redirect: shota/other/generalinfo
+    redirectClose: shota/other/generalinfo

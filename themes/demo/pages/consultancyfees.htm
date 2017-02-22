@@ -1,0 +1,38 @@
+title = "consultancyfees"
+url = "/consultancyfees"
+layout = "mainlayout"
+is_hidden = 0
+==
+<?php
+use shota\other\models\Aboutus;
+
+function onStart() {
+ 
+ $this['record']=Aboutus::first();   
+ 
+    
+}
+?>
+==
+<body class="other__page">
+
+<header class="header">
+
+
+    {% partial 'header' %}
+
+    <div class="header__info">
+        <h2>Consultanct fees</h2>
+    </div>
+
+</header>
+
+<div class="footer_fixator">
+<div class="container">
+
+{{record.consultancy|raw}}
+
+</div>
+</div>
+
+{% partial 'footer' %}

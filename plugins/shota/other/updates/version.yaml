@@ -1,0 +1,14 @@
+1.0.1:
+    - 'Initialize plugin.'
+1.0.2:
+    - 'Created table shota_other_other'
+    - builder_table_create_shota_other_other.php
+1.0.3:
+    - 'Updated table shota_other_other'
+    - builder_table_update_shota_other_other.php
+1.0.4:
+    - 'Updated table shota_other_other'
+    - builder_table_update_shota_other_other_2.php
+1.0.5:
+    - 'Updated table shota_other_other'
+    - builder_table_update_shota_other_other_3.php

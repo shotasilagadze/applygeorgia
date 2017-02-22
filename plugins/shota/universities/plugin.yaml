@@ -1,0 +1,11 @@
+plugin:
+    name: 'shota.universities::lang.plugin.name'
+    description: 'shota.universities::lang.plugin.description'
+    author: shota
+    icon: oc-icon-graduation-cap
+    homepage: ''
+navigation:
+    main-menu-item:
+        label: Universities
+        url: shota/universities/universitycontroller
+        icon: icon-institution

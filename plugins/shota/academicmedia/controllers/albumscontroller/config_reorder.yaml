@@ -1,0 +1,4 @@
+title: AlbumsController
+modelClass: Shota\Academicmedia\Models\AcademicMedia
+toolbar:
+    buttons: reorder_toolbar

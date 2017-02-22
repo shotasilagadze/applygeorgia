@@ -1,0 +1,4 @@
+columns:
+    id:
+        label: 'About us'
+        type: text

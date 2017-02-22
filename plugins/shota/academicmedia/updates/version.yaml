@@ -1,0 +1,11 @@
+1.0.1:
+    - 'Initialize plugin.'
+1.0.2:
+    - 'Created table shota_academicmedia_academicmedia'
+    - builder_table_create_shota_academicmedia_academicmedia.php
+1.0.3:
+    - 'Updated table shota_academicmedia_academicmedia'
+    - builder_table_update_shota_academicmedia_academicmedia.php
+1.0.4:
+    - 'Updated table shota_academicmedia_academicmedia'
+    - builder_table_update_shota_academicmedia_academicmedia_2.php

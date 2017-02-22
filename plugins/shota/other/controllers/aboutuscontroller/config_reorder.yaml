@@ -1,0 +1,4 @@
+title: AboutusController
+modelClass: Shota\Other\Models\Aboutus
+toolbar:
+    buttons: reorder_toolbar

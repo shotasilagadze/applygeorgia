@@ -1,0 +1,11 @@
+plugin:
+    name: 'shota.academicmedia::lang.plugin.name'
+    description: 'shota.academicmedia::lang.plugin.description'
+    author: shota
+    icon: oc-icon-camera
+    homepage: ''
+navigation:
+    main-menu-item:
+        label: Albums
+        url: shota/academicmedia/albumscontroller
+        icon: icon-camera

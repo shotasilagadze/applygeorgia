@@ -1,0 +1,4 @@
+title: GeneralInfo
+modelClass: Shota\Other\Models\G2
+toolbar:
+    buttons: reorder_toolbar

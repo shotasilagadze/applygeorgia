@@ -1,0 +1,103 @@
+title = "apply"
+url = "/apply/:id?"
+layout = "mainlayout"
+is_hidden = 0
+
+[builderDetails]
+modelClass = "Shota\Universities\Models\University"
+identifierValue = "{{ :id }}"
+modelKeyColumn = "id"
+displayColumn = "name"
+notFoundMessage = "Record not found"
+==
+<body class="other__page">
+
+<header class="header">
+
+
+    {% partial 'header' %}
+
+    <div class="header__info">
+        <h2>Apply Form</h2>
+    </div>
+
+</header>
+
+	<div class="footer_fixator">
+<section class="content">
+
+    <div class="container">
+        <div class="row contact__page">
+
+            <div class="col-lg-8 col-lg-offset-2 contact__info">
+                
+                <div class="col-lg-12">
+
+                    <form action="/backend/shota/schools/SchoolController/apply" class="contact__form clearfix" method="post">
+
+                        <div class="row">
+                            <div class="input_area col-lg-6">
+                                <input name ="name" type="text" class="input_type" placeholder="Name and Surname...">
+                            </div>
+                            <div class="input_area col-lg-6">
+                                <input name ="email" type="email" class="input_type" placeholder="Email...">
+                            </div>
+                            <div class="input_area col-lg-6">
+                                <input id="dobUk" name="date" class="input_type js-date--west" type="text" placeholder="DD/MM /YYYY">
+                            </div>
+                            <div class="input_area col-lg-6">
+                                <select name="country" class="input_type">
+                                                                  
+                                     <option value="South Africa">South Africa</option>
+                                </select>
+                            </div>
+                            <div class="input_area col-lg-6">
+
+                                <select name="level" class="input_type">
+                                    <option value="Undergraduate">Undergraduate</option>
+                                    <option value="Postgraduate">Postgraduate</option>
+                                    <option value="Career based/Vocational">Career based/Vocational</option>
+
+
+                                </select>
+
+                            </div>
+                            <div class="input_area col-lg-6">
+
+                                <select name="program" class="input_type">
+                                
+                                {% for program in record.programs %}
+                                    <option value="{{program.title}}">{{program.title}}</option>
+                                {% endfor %}
+                                
+                                </select>
+
+                            </div>
+
+                            <div class="input_area clearfix">
+                                <textarea name="message" class="input_type col-lg-12" placeholder="Your message"></textarea>
+                            </div>
+
+                            <div class="input_area">
+                                <button type="submit" class="send_btn">Send</button>
+                            </div>
+                        </div>
+                    </form>
+
+
+
+                </div>
+
+
+            </div>
+
+
+
+        </div>
+    </div>
+
+</section>
+</div>
+
+
+{% partial 'footer' %}

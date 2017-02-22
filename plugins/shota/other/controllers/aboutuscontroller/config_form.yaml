@@ -1,0 +1,10 @@
+name: AboutusController
+form: $/shota/other/models/aboutus/fields.yaml
+modelClass: Shota\Other\Models\Aboutus
+defaultRedirect: shota/other/aboutuscontroller
+create:
+    redirect: 'shota/other/aboutuscontroller/update/:id'
+    redirectClose: shota/other/aboutuscontroller
+update:
+    redirect: shota/other/aboutuscontroller
+    redirectClose: shota/other/aboutuscontroller

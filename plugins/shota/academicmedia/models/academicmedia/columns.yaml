@@ -1,0 +1,6 @@
+columns:
+    album:
+        label: 'album title'
+        type: text
+        searchable: true
+        sortable: true

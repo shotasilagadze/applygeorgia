@@ -1,0 +1,15 @@
+plugin:
+    name: 'shota.other::lang.plugin.name'
+    description: 'shota.other::lang.plugin.description'
+    author: shota
+    icon: oc-icon-info-circle
+    homepage: ''
+navigation:
+    main-menu-item:
+        label: 'About Georgia'
+        url: shota/other/aboutuscontroller
+        icon: icon-info-circle
+    main-menu-item2:
+        label: 'General information'
+        url: shota/other/generalinfo
+        icon: icon-info

@@ -1,0 +1,11 @@
+list: $/shota/academicmedia/models/academicmedia/columns.yaml
+modelClass: Shota\Academicmedia\Models\AcademicMedia
+title: AlbumsController
+noRecordsMessage: 'backend::lang.list.no_records'
+showSetup: true
+showCheckboxes: true
+toolbar:
+    buttons: list_toolbar
+    search:
+        prompt: 'backend::lang.list.search_prompt'
+recordUrl: 'shota/academicmedia/albumscontroller/update/:id'

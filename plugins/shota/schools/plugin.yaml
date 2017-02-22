@@ -1,0 +1,11 @@
+plugin:
+    name: 'shota.schools::lang.plugin.name'
+    description: 'shota.schools::lang.plugin.description'
+    author: shota
+    icon: oc-icon-graduation-cap
+    homepage: ''
+navigation:
+    main-menu-item:
+        label: School
+        url: shota/schools/schoolcontroller
+        icon: icon-graduation-cap

@@ -1,0 +1,11 @@
+list: $/shota/universities/models/university/columns.yaml
+modelClass: Shota\Universities\Models\University
+title: UniversityController
+noRecordsMessage: 'backend::lang.list.no_records'
+showSetup: true
+showCheckboxes: true
+toolbar:
+    buttons: list_toolbar
+    search:
+        prompt: 'backend::lang.list.search_prompt'
+recordUrl: 'shota/universities/universitycontroller/update/:id'

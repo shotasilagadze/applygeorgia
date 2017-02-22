@@ -1,0 +1,61 @@
+title = "about_georgia"
+url = "/aboutgeorgia"
+layout = "mainlayout"
+is_hidden = 0
+==
+<?php
+use shota\other\models\Aboutus;
+
+function onStart() {
+ 
+ $this['record']=Aboutus::first();   
+ 
+    
+}
+?>
+==
+<body class="other__page">
+
+<header class="header">
+
+    {% partial 'header' %}
+
+    <div class="header__info">
+        <h2>About Georgia</h2>
+    </div>
+
+
+</header>
+
+<section class="content">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-5">
+                <img src="{{record.image.path}}" alt="" class="img-responsive">
+            </div>
+            <div class="col-lg-7 about_description">
+                <p>
+            {{record.text_1}}    </p>
+            
+            </div>
+        </div>
+
+        <p>
+            {{record.text_2}}
+        </p>
+
+        <p>
+            <h2>{{record.title}}</h2>
+            {% for recin in record.facts %}
+            {% for r in recin %}
+            <p>{{r}}</p>
+            
+            {% endfor %}
+            {% endfor %}
+        </p>
+    </div>
+
+</section>
+
+
+{% partial 'footer' %}

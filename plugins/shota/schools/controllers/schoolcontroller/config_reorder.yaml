@@ -1,0 +1,4 @@
+title: SchoolController
+modelClass: Shota\Schools\Models\School
+toolbar:
+    buttons: reorder_toolbar

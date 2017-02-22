@@ -1,0 +1,10 @@
+name: UniversityController
+form: $/shota/universities/models/university/fields.yaml
+modelClass: Shota\Universities\Models\University
+defaultRedirect: shota/universities/universitycontroller
+create:
+    redirect: 'shota/universities/universitycontroller/update/:id'
+    redirectClose: shota/universities/universitycontroller
+update:
+    redirect: shota/universities/universitycontroller
+    redirectClose: shota/universities/universitycontroller

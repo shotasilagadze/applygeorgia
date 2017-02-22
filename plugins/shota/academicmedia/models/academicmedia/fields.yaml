@@ -1,0 +1,31 @@
+fields:
+    album:
+        label: 'Album title'
+        oc.commentPosition: ''
+        span: auto
+        type: text
+    images:
+        label: 'Upload images'
+        oc.commentPosition: ''
+        mode: image
+        imageWidth: '200'
+        imageHeight: '200'
+        useCaption: true
+        thumbOptions:
+            mode: crop
+            extension: auto
+        span: auto
+        type: fileupload
+    videos:
+        label: Videos
+        oc.commentPosition: ''
+        prompt: 'Add new item'
+        span: auto
+        type: repeater
+        form:
+            fields:
+                video_links:
+                    label: Video
+                    oc.commentPosition: ''
+                    span: auto
+                    type: text

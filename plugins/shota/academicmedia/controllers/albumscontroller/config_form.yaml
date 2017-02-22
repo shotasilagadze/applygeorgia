@@ -1,0 +1,10 @@
+name: AlbumsController
+form: $/shota/academicmedia/models/academicmedia/fields.yaml
+modelClass: Shota\Academicmedia\Models\AcademicMedia
+defaultRedirect: shota/academicmedia/albumscontroller
+create:
+    redirect: 'shota/academicmedia/albumscontroller/update/:id'
+    redirectClose: shota/academicmedia/albumscontroller
+update:
+    redirect: shota/academicmedia/albumscontroller
+    redirectClose: shota/academicmedia/albumscontroller

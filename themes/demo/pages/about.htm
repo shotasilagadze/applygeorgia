@@ -1,0 +1,36 @@
+title = "about"
+url = "/about"
+layout = "mainlayout"
+is_hidden = 0
+==
+<?php
+use shota\other\models\Aboutus;
+
+function onStart() {
+ 
+ $this['record']=Aboutus::first();   
+ 
+    
+}
+?>
+==
+<body class="other__page">
+
+<header class="header">
+
+
+    {% partial 'header' %}
+
+    <div class="header__info">
+        <h2>About us</h2>
+    </div>
+
+</header>
+
+<div class="footer_fixator">
+<div class="container">
+    {{record.aboutus|raw}}
+</div>
+</div>
+
+{% partial 'footer' %}

@@ -1,0 +1,123 @@
+title = "uni_view"
+url = "/uni_view/:id?"
+layout = "mainlayout"
+is_hidden = 0
+
+[builderDetails]
+modelClass = "Shota\Universities\Models\University"
+identifierValue = "{{ :id }}"
+modelKeyColumn = "id"
+displayColumn = "name"
+notFoundMessage = "Record not found"
+==
+<?php
+function onStart() {
+ $this['var']=1;   
+}
+?>
+==
+<body class="other__page">
+
+<header class="header">
+    {% partial 'header' %}
+    <div class="header__info">
+        <div class="container">
+            <div class="row">
+                <div class="header__info__view__page clearfix">
+                    <div class="view__page_img col-lg-3">
+                        <img src="{{record.Logo.path}}" alt="" class="img-responsive">
+                    </div>
+                    <div class="col-lg-8">
+                        <h2>{{record.name}}</h2>
+                        <a href="/apply/{{record.id}}" ><button class="btn_apply">Apply</button></a>
+                        <a target="_blank" href="{{record.web}}"><button class="btn_web">visit website</button></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+</header>
+
+<section class="content">
+
+    <div class="container inside_university">
+
+        <div class="content__programs">
+            <h3>UNIVERSITY PROGRAMS</h3>
+            {% for program in record.programs %}
+            
+            <a href="#" data-toggle="modal" data-target="#myModal{{var}}">{{program.title}}</a>
+            
+            
+            <div class="modal fade" id="myModal{{var}}" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+                <div class="modal-dialog" role="document">
+                    <div class="modal-content">
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                        <div class="modal-body">
+                            <h4 class="program__title">{{program.title}}</h4>
+                           {{program.description}}
+                        </div>
+            
+                    </div>
+                </div>
+            </div>
+            
+            {% set var=var+1 %}
+            
+            {% endfor %}
+        </div>
+
+        <div class="content__about">
+            <h3>ABOUT UNIVERSITY</h3>
+            <p>{{record.aboutus_mini}}</p>
+            
+        </div>
+
+        <div class="content__gallery" id="gallery">
+            <h3>PHOTO GALLERY</h3>
+            <div class="content__gallery__items">
+            
+                {% for image in record.Albums.images %}                
+            
+            
+            <a href="{{image.path}}">
+                    <img src="{{image.path|mediathumb_resize() }}" class="img-responsive">
+                </a>
+            
+                {% endfor %}
+                
+            </div>
+        </div>
+
+        <p>
+            {{record.aboutus_big|raw}}
+        </p>
+
+        <div class="content__gallery" id="gallery2">
+            <h3>Video GALLERY</h3>
+            <div class="content__gallery__items">
+            
+            {% for v in record.Albums.videos %}
+             
+             {% for video in v %}
+             
+              <a href="https://www.youtube.com/watch?v={{video}}" class="video__gallery">
+                  <img src="https://i.ytimg.com/vi/{{video}}/hqdefault.jpg" class="img-responsive" />
+              </a>
+                                               
+             
+             {% endfor %}
+            
+            {% endfor %}
+    
+            </div>
+        </div>
+
+
+    </div>
+
+</section>
+
+{% partial 'footer' %}

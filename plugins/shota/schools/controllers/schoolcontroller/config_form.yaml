@@ -1,0 +1,10 @@
+name: SchoolController
+form: $/shota/schools/models/school/fields.yaml
+modelClass: Shota\Schools\Models\School
+defaultRedirect: shota/schools/schoolcontroller
+create:
+    redirect: 'shota/schools/schoolcontroller/update/:id'
+    redirectClose: shota/schools/schoolcontroller
+update:
+    redirect: shota/schools/schoolcontroller
+    redirectClose: shota/schools/schoolcontroller

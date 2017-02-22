@@ -1,0 +1,4 @@
+title: UniversityController
+modelClass: Shota\Universities\Models\University
+toolbar:
+    buttons: reorder_toolbar

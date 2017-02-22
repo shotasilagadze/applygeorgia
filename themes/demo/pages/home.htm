@@ -1,0 +1,138 @@
+title = "home"
+url = "/"
+layout = "mainlayout"
+is_hidden = 0
+
+[builderList]
+modelClass = "Shota\Schools\Models\School"
+scope = "-"
+displayColumn = "name"
+noRecordsMessage = "No records found"
+detailsPage = "finduni"
+detailsKeyColumn = ":id"
+detailsUrlParameter = "id"
+pageNumber = "{{ :page }}"
+==
+<?php
+use shota\universities\models\University;
+use shota\other\models\Aboutus;
+
+function onStart() {
+    
+    $this['uni']=University::where('published',true)->first();
+    $this['about']=Aboutus::first();
+}
+?>
+==
+<body class="home_page">
+
+	
+<header class="header">
+		
+	   {% partial 'header' %}
+
+		<div class="header__info">
+			<h2>A Study Guide for International Students</h2>
+		</div>
+
+
+	</header>
+
+	<section class="content">
+
+		<section class="study__choice">
+			<div class="container">
+
+				<div class="block__title">
+					<h2>Unsure what to study?</h2>
+					<p>Have a look here…</p>
+				</div>
+
+				<div class="study__choice__content">
+					<div class="row">
+						{% for record in records %}
+						<div class="item col-lg-4">
+							<a href="/find_university/{{record.id}}" class="item__content">
+
+								<i class="item__icon"></i>
+								<h2 class="item__title">{{record.name}}</h2>
+
+							</a>
+						</div>
+						{% endfor %}
+					</div>
+				</div>
+
+			</div>
+		</section>
+
+		<section class="study__here">
+			<div class="container">
+
+				<div class="block__title">
+					<h2>YOU CAN STUDY HERE</h2>
+				</div>
+
+				<div class="study__here__container">
+					<div class="row">
+						<div class="col-lg-5">
+							<img src="{{uni.image.path}}" alt="" class="img-responsive">
+						</div>
+						<div class="study__here__container__info col-lg-7 ">
+							<h1 class="info_title"><a href="/uni_view/{{uni.id}}">{{uni.name}}</a></h1>
+
+							<div class="info_description">
+								<p>
+									{{uni.aboutus_mini}}
+								</p>
+							
+								
+							</div>
+
+							<a href="/uni_view/{{uni.id}}"><button class="about_us">Details</button></a>
+						</div>
+					</div>
+				</div>
+
+			</div>
+		</section>
+		
+		
+		<section class="present__country">
+			
+			
+			<figure class="present__country_block present__country_img">
+				<img src="{{about.image.path}}" alt="">
+			</figure>
+
+			<div class="present__country_block present__country_content">
+				<h2 class="content__title">This is Georgia</h2>
+				<p class="content__subtitle">The country that love you</p>
+
+				<p class="content__description">
+					{{about.text_1}}
+				</p>
+
+				<div class="content_min_gallery" id="gallery">
+					{% for image in about.images %}
+				
+						<a class="content_min_gallery_item" href="{{image.path}}"><img src="{{image.path}}" alt=""></a>
+				
+					{% endfor %}
+				</div>
+
+				<a href="/aboutgeorgia" class="btn__present">More</a>
+			</div>
+			
+			
+		</section>
+
+
+
+	</section>
+	
+	
+	
+	
+
+    {% partial 'footer' %}

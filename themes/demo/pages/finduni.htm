@@ -1,0 +1,88 @@
+title = "finduni"
+url = "/find_university/:id?"
+layout = "mainlayout"
+is_hidden = 0
+
+[builderList]
+modelClass = "Shota\Universities\Models\University"
+scope = "-"
+displayColumn = "name"
+noRecordsMessage = "No records found"
+detailsPage = "uniview"
+detailsKeyColumn = ":id"
+detailsUrlParameter = "id"
+pageNumber = "{{ :page }}"
+==
+<?php
+use shota\schools\models\School;
+
+
+function onStart() {
+    
+    if ($this->param('id')) {
+        $v=$this->param('id');        
+        $school=School::where('id',$v)->first();
+        $this['unis']=$school->Universities()->get();         
+    }
+     
+    
+    
+}
+?>
+==
+<body class="other__page">
+
+<header class="header">
+
+	   {% partial 'header' %}
+
+    <div class="header__info">
+        <h2>FIND YOUR UNIVERSITY</h2>
+    </div>
+
+
+</header>
+
+<div class="footer_fixator">
+<section class="content">
+
+    <div class="container">
+        <div class="row">
+           
+            {% if unis %}
+            
+            
+            {% for record in unis %}
+            <div class="find__item col-lg-6">
+                <div class="item">
+                    <a class="item__poster" href="/uni_view/{{record.id}}"><img src="{{record.Logo.path}}" alt="" class="img-responsive"></a>
+                    <h2 class="title">{{record.name}}</h2>
+                    <a class="item__view" href="/uni_view/{{record.id}}">view information</a>
+                </div>
+            </div>
+            {% endfor %}
+            
+            
+            {% else %}
+            
+            {% for record in records %}
+            <div class="find__item col-lg-6">
+                <div class="item">
+                    <a class="item__poster" href="/uni_view/{{record.id}}"><img src="{{record.Logo.path}}" alt="" class="img-responsive"></a>
+                    <h2 class="title">{{record.name}}</h2>
+                    <a class="item__view" href="/uni_view/{{record.id}}">view information</a>
+                </div>
+            </div>
+            {% endfor %}
+            
+            {% endif %}
+            
+            
+            
+        </div>
+    </div>
+
+</section>
+</div>
+
+{% partial 'footer' %}

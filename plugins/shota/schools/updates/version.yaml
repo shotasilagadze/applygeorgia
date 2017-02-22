@@ -1,0 +1,11 @@
+1.0.1:
+    - 'Initialize plugin.'
+1.0.2:
+    - 'Created table shota_schools_schoold'
+    - builder_table_create_shota_schools_schoold.php
+1.0.3:
+    - 'Updated table shota_schools_schoold'
+    - builder_table_update_shota_schools_school.php
+1.0.4:
+    - 'Created table shota_schools_schooluniversity'
+    - builder_table_create_shota_schools_schooluniversity.php

@@ -1,0 +1,51 @@
+fields:
+    text_1:
+        label: 'About georgia text - 1'
+        oc.commentPosition: ''
+        span: full
+        type: text
+    text_2:
+        label: 'About georgia text - 2'
+        oc.commentPosition: ''
+        span: full
+        type: text
+    title:
+        label: 'About georgia title'
+        oc.commentPosition: ''
+        span: auto
+        type: text
+    image:
+        label: 'About georgia image'
+        oc.commentPosition: ''
+        mode: image
+        imageWidth: '200'
+        imageHeight: '200'
+        useCaption: true
+        thumbOptions:
+            mode: crop
+            extension: auto
+        span: auto
+        type: fileupload
+    facts:
+        label: Facts
+        oc.commentPosition: ''
+        prompt: 'Add new item'
+        span: auto
+        type: repeater
+        form:
+            fields:
+                facts:
+                    label: fact
+                    oc.commentPosition: ''
+                    span: auto
+                    type: text
+    images:
+        label: 'Upload images'
+        oc.commentPosition: ''
+        mode: image
+        useCaption: true
+        thumbOptions:
+            mode: crop
+            extension: auto
+        span: auto
+        type: fileupload

@@ -1,0 +1,11 @@
+list: $/shota/other/models/aboutus/columns.yaml
+modelClass: Shota\Other\Models\Aboutus
+title: AboutusController
+noRecordsMessage: 'backend::lang.list.no_records'
+showSetup: true
+showCheckboxes: true
+toolbar:
+    buttons: list_toolbar
+    search:
+        prompt: 'backend::lang.list.search_prompt'
+recordUrl: 'shota/other/aboutuscontroller/update/:id'

@@ -1,0 +1,11 @@
+list: $/shota/other/models/g2/columns.yaml
+modelClass: Shota\Other\Models\G2
+title: GeneralInfo
+noRecordsMessage: 'backend::lang.list.no_records'
+showSetup: true
+showCheckboxes: true
+toolbar:
+    buttons: list_toolbar
+    search:
+        prompt: 'backend::lang.list.search_prompt'
+recordUrl: 'shota/other/generalinfo/update/:id'

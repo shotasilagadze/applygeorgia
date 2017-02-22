@@ -1,0 +1,11 @@
+list: $/shota/schools/models/school/columns.yaml
+modelClass: Shota\Schools\Models\School
+title: SchoolController
+noRecordsMessage: 'backend::lang.list.no_records'
+showSetup: true
+showCheckboxes: true
+toolbar:
+    buttons: list_toolbar
+    search:
+        prompt: 'backend::lang.list.search_prompt'
+recordUrl: 'shota/schools/schoolcontroller/update/:id'

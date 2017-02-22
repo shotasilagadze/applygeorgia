@@ -1,0 +1,31 @@
+fields:
+    consultancy:
+        label: 'Consultancy text'
+        size: large
+        oc.commentPosition: ''
+        span: full
+        type: richeditor
+    aboutus:
+        label: 'About us text'
+        size: large
+        oc.commentPosition: ''
+        span: full
+        type: richeditor
+    admissions:
+        label: Admissions
+        oc.commentPosition: ''
+        prompt: 'Add new item'
+        span: auto
+        type: repeater
+        form:
+            fields:
+                title:
+                    label: Title
+                    oc.commentPosition: ''
+                    span: auto
+                    type: text
+                text:
+                    label: Text
+                    oc.commentPosition: ''
+                    span: auto
+                    type: text

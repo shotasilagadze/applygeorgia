@@ -1,0 +1,76 @@
+title = "admissions"
+url = "/admissions"
+layout = "mainlayout"
+is_hidden = 0
+==
+<?php
+use shota\other\models\Aboutus;
+
+function onStart() {
+ 
+ $this['record']=Aboutus::first();   
+ 
+    $this['var']=1;
+}
+?>
+==
+<body class="other__page">
+
+<header class="header">
+
+   {% partial 'header' %}
+
+    <div class="header__info">
+        <h2>Admission</h2>
+    </div>
+
+
+</header>
+
+<div class="footer_fixator">
+
+<section class="content">
+
+    <div class="container">
+        <div class="row contact__page">
+
+            <div class="col-lg-8 col-lg-offset-2 contact__info">
+
+
+                <div class="panel-group consultancy__page" id="accordion" role="tablist" aria-multiselectable="true">
+                    
+                    
+                    {% for rec in record.admissions %}
+                    <div class="panel panel-default consultancy__page__item">
+                        <div class="panel-heading" role="tab" id="heading{{var}}">
+                            <h4 class="panel-title">
+                                <a class="collapsed" role="button" data-toggle="collapse" data-parent="#accordion" href="#collapse{{var}}" aria-expanded="false" aria-controls="collapseTwo">
+                                    {{rec.title}}
+                                </a>
+                            </h4>
+                        </div>
+                        <div id="collapse{{var}}" class="panel-collapse collapse" role="tabpanel" aria-labelledby="heading{{var}}">
+                            <div class="panel-body">
+                                {{rec.text}}
+                            </div>
+                        </div>
+                    </div>
+                    
+                    {% set var=var+1 %}
+                    {% endfor %}
+                    
+                </div>
+
+
+            </div>
+
+
+
+        </div>
+    </div>
+
+</section>
+
+</div>
+
+{% partial 'footer' %}
