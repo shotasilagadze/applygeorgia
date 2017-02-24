@@ -2,15 +2,29 @@ title = "test"
 url = "/test"
 is_hidden = 0
 ==
-<p id="mda">ss </p>
-   
-
-<button type="button" onclick="myfunction()" >thisone</button>
+<?php
+use shota\schools\models\School;
 
 
-<script> 
-function myfunction() {
- document.getElementById("mda").innerHTML = "Paragraph changed.";   
+
+function onStart() {
+  
+        $var=School::get();     
+        
+    
 }
+?>
+==
+<body>
 
-</script>
+        
+        
+        <div id="pir">         
+                    <a href="asd"> aaaa </a>                                              
+        </div>
+        
+        
+        
+        <div id="meo"> bbbb</div>
+
+</body>

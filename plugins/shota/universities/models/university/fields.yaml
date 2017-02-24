@@ -10,7 +10,7 @@ fields:
         span: auto
         type: text
     programs:
-        label: Repeater
+        label: Programs
         oc.commentPosition: ''
         prompt: 'Add new item'
         span: auto
@@ -18,51 +18,15 @@ fields:
         form:
             fields:
                 title:
-                    label: 'Program title'
+                    label: title
                     oc.commentPosition: ''
                     span: auto
                     type: text
                 description:
-                    label: Description
+                    label: description
                     oc.commentPosition: ''
                     span: auto
                     type: text
-    image:
-        label: 'University photo'
-        oc.commentPosition: ''
-        mode: image
-        imageWidth: '300'
-        imageHeight: '300'
-        useCaption: true
-        thumbOptions:
-            mode: crop
-            extension: auto
-        span: auto
-        type: fileupload
-    published:
-        label: 'Publish on home page'
-        span: auto
-        disabled: 0
-        type: checkbox
-    Albums:
-        label: 'Choose album'
-        oc.commentPosition: ''
-        nameFrom: album
-        descriptionFrom: 'Album title'
-        span: auto
-        type: relation
-    aboutus_mini:
-        label: 'Small description'
-        size: small
-        oc.commentPosition: ''
-        span: full
-        type: textarea
-    aboutus_big:
-        label: 'Full description'
-        size: large
-        oc.commentPosition: ''
-        span: full
-        type: richeditor
     Schools:
         label: 'Choose schools'
         oc.commentPosition: ''
@@ -82,3 +46,39 @@ fields:
             extension: auto
         span: auto
         type: fileupload
+    published:
+        label: 'Publish on home page'
+        span: auto
+        disabled: 0
+        type: checkbox
+    image:
+        label: 'University photo'
+        oc.commentPosition: ''
+        mode: image
+        imageWidth: '300'
+        imageHeight: '300'
+        useCaption: true
+        thumbOptions:
+            mode: crop
+            extension: auto
+        span: auto
+        type: fileupload
+    Albums:
+        label: 'Choose album'
+        oc.commentPosition: ''
+        nameFrom: album
+        descriptionFrom: 'Album title'
+        span: auto
+        type: relation
+    aboutus_mini:
+        label: 'Small description'
+        size: small
+        oc.commentPosition: ''
+        span: full
+        type: textarea
+    aboutus_big:
+        label: 'Full description'
+        size: large
+        oc.commentPosition: ''
+        span: full
+        type: richeditor
