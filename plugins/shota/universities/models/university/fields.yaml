@@ -75,7 +75,7 @@ fields:
         size: small
         oc.commentPosition: ''
         span: full
-        type: textarea
+        type: richeditor
     aboutus_big:
         label: 'Full description'
         size: large

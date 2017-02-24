@@ -1,14 +1,16 @@
 fields:
     text_1:
-        label: 'About georgia text - 1'
+        label: 'about georgia text_1'
+        size: small
         oc.commentPosition: ''
         span: full
-        type: text
+        type: richeditor
     text_2:
-        label: 'About georgia text - 2'
+        label: 'about georgia text_2'
+        size: small
         oc.commentPosition: ''
         span: full
-        type: text
+        type: richeditor
     title:
         label: 'About georgia title'
         oc.commentPosition: ''
