@@ -933,7 +933,7 @@ color: #AEADA6; }
   background: #ff5756;
   background: linear-gradient(90deg, #f0a15e 0%, #ff5756 100%);
   transition: .3s ease-in;
-  margin-bottom: 100px; }
+  margin-bottom: 10px; }
 
 
 
@@ -990,3 +990,80 @@ color: #AEADA6; }
 .nav>li>a:focus, .nav>li>a:hover {
   background: transparent;
 }
+
+@media(max-width:767px){
+    .home_page .content .study__choice .item__content { margin-bottom: 15px; }    
+    .home_page .content .study__choice .block__title, .home_page .content .study__here .block__title { margin: 0px; }
+    .home_page .content .study__choice .block__title h2, .home_page .content .study__here .block__title h2 {
+        font-size: 20px;
+        margin-bottom: 0px; }
+        
+    .home_page .content .study__here__container__info .info_title,
+    .home_page .content .study__here__container img { margin-bottom: 20px; margin-top: 15px; } 
+    .home_page .header__info h2 { 
+        font-size: 25px;
+        margin-top: 60px;
+        margin-bottom: 0; }
+        
+    .home_page .content .study__here__container__info .info_title a {
+        font-size: 20px; }
+    .home_page .content .study__here__container__info .info_description { margin-bottom: 0px; }
+    .home_page .content .present__country_content .content__title { font-size: 28px;  }
+    .home_page .content .present__country_img img {
+        width: 100%;
+        height: auto;
+    }
+    .home_page .content .present__country_content { padding: 20px; }
+    .home_page .content .present__country .present__country_block {
+        width: 100%;
+        display: block;
+        overflow: hidden;
+        float: left;
+    }
+    .home_page .content .present__country {
+        overflow: hidden;
+        background: #F8F8F8;
+        padding-bottom: 50px;
+        width: 100%;
+        float: left;
+        margin-bottom: 0;
+        height: auto;
+        padding-bottom: 20px;
+    }
+    .home_page .content .present__country_img {
+        height: auto;
+    }
+    .home_page .content .present__country_content .content__description { width: 100%;  margin-top: 15px; }
+    .footer__right {
+        vertical-align: middle;
+        text-align: left;
+        float: right;
+        width: 150px;
+        margin-top: 2px;
+        display: block;
+        justify-content: flex-end;
+    }
+    .footer__left p.footer__left_fallow {
+        margin: 0;
+        width: 150px;
+        float: left;
+    }
+    .home_page .content .present__country_content .content_min_gallery { display: none; }
+    .home_page .content .study__here__container__info { padding-left: auto; padding-right: auto;  }
+    .other__page .header { margin-bottom: 0px;  } 
+    .other__page .find__item .item__poster img {
+        height: inherit;
+        display: inline-block;
+    }
+    .other__page .find__item .item {
+        padding: 20px 15px 10px 15px;
+    }
+    .other__page .contact__page .contact__form .send_btn {
+        width: 120px;
+        left: calc(50% - 60px);
+    }
+    
+}
+@media(min-width:768px){}
+@media(min-width:992px){}
+@media(min-width:1200px){}
