@@ -29,10 +29,10 @@ class SchoolController extends Controller
 
     	Mail::send('shota.schools::mail.contactform', $vars, function($message) {
 
-    	$message->from('silagadzeshota@gmail.com', 'Applygeorgia');
-    	$message->to('silagadzeshota@gmail.com');
+    	$message->from('info@applygeorgia.com', 'Applygeorgia');
+    	$message->to('info@applygeorgia.com');
     	$message->subject('კონტაქტი');
-    	$message->replyTo('silagadzeshota@gmail.com',$name=null);
+    	$message->replyTo('info@applygeorgia.com',$name=null);
 
 		});
 
@@ -46,8 +46,8 @@ class SchoolController extends Controller
 
         Mail::send('shota.schools::mail.applyform', $vars, function($message) {
 
-        $message->from('silagadzeshota@gmail.com', 'Apply form');
-        $message->to('silagadzeshota@gmail.com');
+        $message->from('info@applygeorgia.com', 'Apply form');
+        $message->to('info@applygeorgia.com');
         $message->subject('APPLY');
         $message->replyTo(post('email'),$name=null);
 

@@ -28,7 +28,7 @@ return [
     |
     */
 
-    'host' => 'smtp.gmail.com',
+    'host' => 'smtp.zoho.com',
 
     /*
     |--------------------------------------------------------------------------
@@ -54,7 +54,7 @@ return [
     |
     */
 
-    'from' => ['address' => 'silagadzeshota@gmail.com', 'name' => 'Applygeorgia'],
+    'from' => ['address' => 'info@applygeorgia.com', 'name' => 'Applygeorgia'],
 
     /*
     |--------------------------------------------------------------------------
@@ -80,7 +80,7 @@ return [
     |
     */
 
-    'username' => 'silagadzeshota@gmail.com',
+    'username' => 'info@applygeorgia.com',
 
     /*
     |--------------------------------------------------------------------------
@@ -93,7 +93,7 @@ return [
     |
     */
 
-    'password' => '!Paroli123',
+    'password' => 'applygeorgia123',
 
     /*
     |--------------------------------------------------------------------------
@@ -109,7 +109,7 @@ return [
  'sendmail' => '/usr/sbin/sendmail -bs',
 
     'to' => [
-        'address' => 'silagadzeshota@gmail.com',
+        'address' => 'info@applygeorgia.com',
         'name' => 'catch mails'
 
     ],
