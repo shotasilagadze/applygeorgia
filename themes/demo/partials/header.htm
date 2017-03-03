@@ -1,23 +1,65 @@
 ==
-<!-- <nav class="header__nav">
-    <a href="/">Home</a>
+{% if main %}
+<a href="/" class="logo2" style="top: 17px;"></a>
+ <div class="visible-xs">
     
-    <a href="/find_university">Universities</a>
-    <a href="/admissions">Admission</a>
-    <a href="/consultancyfees">Consultancy fees</a>
-    <a href="/about">About us</a>        
-    <a href="/contact">Contact</a>
-</nav>
- -->
+    
+    <div class="overlay">
+  <div class="link-wrapper">
+    <a href="/find_university"><span>Universities</span></a>
+    <a href="/admissions"><span>Admission</span></a>
+    <a href="/consultancyfees"><span>Consultancy Fees</span></a>
+    <a href="/about"><span>About Us</span></a>
+    <a href="/aboutgeorgia"><span>About Georgia</span></a>
+    <a href="/contact"><span>Contact</span></a>
+  </div> <!-- //link-wrapper -->
+</div> <!-- //overlay -->
 
+<div class="navigation">
+  <div class="burger_deluxe">
+    <span class="burger_global top_bun"></span>
+    <span class="burger_global patty"></span>
+    <span class="burger_global bottom_bun"></span>
+  </div>	
+</div>
+    
+    </div>
+{% else %}
+<a href="/" class="logo" style="top: 11px;"></a>
+ <div class="visible-xs not_main_page_class">
+    
+    
+    <div class="overlay">
+  <div class="link-wrapper">
+    <a href="/"><span>Home</span></a>
+    <a href="/find_university"><span>Universities</span></a>
+    <a href="/admissions"><span>Admission</span></a>
+    <a href="/consultancyfees"><span>Consultancy Fees</span></a>
+    <a href="/about"><span>About Us</span></a>
+    <a href="/aboutgeorgia"><span>About Georgia</span></a>
+    <a href="/contact"><span>Contact</span></a>
+  </div> <!-- //link-wrapper -->
+</div> <!-- //overlay -->
+
+<div class="navigation">
+  <div class="burger_deluxe">
+    <span class="burger_global top_bun"></span>
+    <span class="burger_global patty"></span>
+    <span class="burger_global bottom_bun"></span>
+  </div>	
+</div>
+    
+    </div>
+{% endif %}
 
 <nav class="header__nav">
         
             
-        <ul class="nav nav-pills">
+        <ul class="nav nav-pills hidden-xs">
             <li><a href="/">Home</a></li>
             <li><a href="/find_university">Universities</a></li>
             <li><a href="/admissions">Admission</a></li>
+            <li><a href="/consultancyfees">Consultancy Fees</a></li>
 
             <li class="dropdown">
               <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">About <span class="caret"></span></a>

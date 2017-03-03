@@ -71,7 +71,7 @@ function onStart() {
 
         <div class="content__about">
             <h3>ABOUT UNIVERSITY</h3>
-            <p>{{record.aboutus_mini}}</p>
+            <p>{{record.aboutus_mini|raw}}</p>
             
         </div>
 
@@ -83,7 +83,7 @@ function onStart() {
             
             
             <a href="{{image.path}}">
-                    <img src="{{image.path|mediathumb_resize() }}" class="img-responsive">
+                    <img src="{{image.path }}" class="img-responsive">
                 </a>
             
                 {% endfor %}

@@ -62,3 +62,12 @@ $( document ).ready(function() {
      $(".footer_fixator").css('min-height',totalsize);
 
 });
+
+
+$('.burger_deluxe').on('click',function() {
+
+  $(this).toggleClass('open');
+  $('.overlay').toggleClass('open');
+  
+});
+

@@ -21,6 +21,9 @@ function onStart() {
     
     $this['uni']=University::where('published',true)->first();
     $this['about']=Aboutus::first();
+    $this['cou']=0;
+    $this['main']=1;
+    
 }
 ?>
 ==
@@ -83,7 +86,7 @@ function onStart() {
 
 							<div class="info_description">
 								<p>
-									{{uni.aboutus_mini}}
+									{{uni.aboutus_mini|raw}}
 								</p>
 							
 								
@@ -107,17 +110,18 @@ function onStart() {
 
 			<div class="present__country_block present__country_content">
 				<h2 class="content__title">This is Georgia</h2>
-				<p class="content__subtitle">The country that love you</p>
+				<p class="content__subtitle">The country that loves you</p>
 
-				<p class="content__description">
-					{{about.text_1}}
-				</p>
+				<div class="content__description">
+					{{about.text_1|raw}}
+				</div>
 
 				<div class="content_min_gallery" id="gallery">
 					{% for image in about.images %}
-				
+					{% if cou<4 %}
+				    {% set cou=cou+1 %}
 						<a class="content_min_gallery_item" href="{{image.path}}"><img src="{{image.path}}" alt=""></a>
-				
+				    {% endif %}
 					{% endfor %}
 				</div>
 

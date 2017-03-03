@@ -35,15 +35,23 @@ function onStart() {
             </div>
             <div class="col-lg-7 about_description">
                 <p>
-            {{record.text_1}}    </p>
+            {{record.text_1|raw}}    </p>
             
             </div>
         </div>
 
         <p>
-            {{record.text_2}}
+            {{record.text_2|raw}}
         </p>
+        
+				<div class="content_min_gallery inside" id="gallery">
 
+                    {% for image in record.images %}
+				
+						<a class="content_min_gallery_item col-xs-12 col-sm-4 col-md-3" href="{{image.path}}"><img src="{{image.path}}" alt=""></a>
+				
+					{% endfor %}
+				</div>
         <p>
             <h2>{{record.title}}</h2>
             {% for recin in record.facts %}
