@@ -29,3 +29,9 @@ fields:
                     oc.commentPosition: ''
                     span: auto
                     type: text
+    admissions_below:
+        label: 'Admission full text'
+        size: large
+        oc.commentPosition: ''
+        span: right
+        type: richeditor
